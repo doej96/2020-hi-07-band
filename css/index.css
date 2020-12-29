@@ -2,10 +2,10 @@ a {color: inherit; text-decoration: none;}
 .wrapper {width: 1000px; margin: auto;}
 
 /* *********.header-wrapper******** */
-.header-wrapper .navi-wrapper {display: flex; justify-content: space-between; background-color: #111; color: #f9f9f9; align-items: center; }
+.header-wrapper .navi-wrapper {display: flex; justify-content: space-between; background-color: #111; color: #f9f9f9; align-items: center; padding-right: 1.5em;}
 .header-wrapper .navi-wrap {display: flex;}
 .header-wrapper .navi-wrap > li {padding: 1em 1.5em;}
-.header-wrapper .navi-wrap > li:hover {background-color: #999; color: #111;}
+.header-wrapper .navi-wrap > li:hover {background-color: #999; color: #000;}
 .header-wrapper .navi-wrap .sub-navi {display: none;}
 .header-wrapper .swiper-slide {position: relative;}
 .header-wrapper .swiper-slide img {width: 100%;}
