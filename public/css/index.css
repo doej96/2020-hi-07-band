@@ -10,8 +10,8 @@ a {color: inherit; text-decoration: none;}
 .bt:hover {background-color: #ccc; color: #111;}
 
 /* *********.header-wrapper******** */
-.header-wrapper .navi-wrapper {display: flex; justify-content: space-between; background-color: #111; color: #f9f9f9; align-items: center; position: relative;}
-.header-wrapper .navi-wrap {display: flex; z-index: 5;}
+.header-wrapper .navi-wrapper {display: flex; justify-content: space-between; background-color: #111; color: #f9f9f9; align-items: center; position: relative; z-index: 10;}
+.header-wrapper .navi-wrap {display: flex;}
 .header-wrapper .navi-wrap > li, .search, .bars {padding: 1em 1.5em; cursor: pointer;}
 .header-wrapper .navi-wrap > li:hover {background-color: #ccc; color: #000;}
 .header-wrapper .search:hover {background-color: #f44236;}

@@ -27,8 +27,8 @@ function onResize() {
 
 function onScroll(e) {
 	var scTop = $(this).scrollTop();
-	var naviHeight = $('.navi-wrapper').outerHeight();
-	if (scTop > naviHeight) $('.navi-wrapper').css({position:"fixed",width:"100%"});
+	var naviHeight = $('.navi-wrapper').innerHeight();
+	if (scTop >= naviHeight) $('.navi-wrapper').css({position:"fixed",width:"100%"});
 	else $('.navi-wrapper').css("position","relative");
 }
 
