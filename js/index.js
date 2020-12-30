@@ -11,12 +11,12 @@ function mainBanner() {
 		slidesPerView: 1,
 		loop: 'true',
 		autoplay: {
-			delay : 3000,
+			delay : 4000,
 			},
 	});
 }
 
 
 $('.navi-wrap li').mouseenter(onNaviEnter);
-$('.navi-wrap li').mouseleave(onNaviLeave);\
+$('.navi-wrap li').mouseleave(onNaviLeave);
 mainBanner();
