@@ -33,7 +33,7 @@ function onScroll(e) {
 }
 
 $(window).resize(onResize).trigger('resize');
-$(window).scroll(onScroll);
+//$(window).scroll(onScroll);
 
 $('.navi-wrap li').mouseenter(onNaviEnter);
 $('.navi-wrap li').mouseleave(onNaviLeave);
