@@ -5,14 +5,19 @@ a {color: inherit; text-decoration: none;}
 .text-wrap {text-align: center;}
 .text-wrap .title {font-size: 1.75em; letter-spacing: 0.125em;}
 .text-wrap .sub {margin: 1.875em 0 1.5em; font-style: italic; color: #999;  letter-spacing: -0.025em;}
+.bt {background-color: #111; padding: 0.6em 0.9em; margin-top: 1em; color: #fff; text-align: center; width: 120px; letter-spacing: -0.0125; cursor: pointer;}
+.bt:hover {background-color: #ccc; color: #111;}
 
 /* *********.header-wrapper******** */
 .header-wrapper .navi-wrapper {display: flex; justify-content: space-between; background-color: #111; color: #f9f9f9; align-items: center;}
-.header-wrapper .navi-wrap {display: flex;}
+.header-wrapper .navi-wrap {display: flex; z-index: 5;}
 .header-wrapper .navi-wrap > li, .search {padding: 1em 1.5em; cursor: pointer;}
 .header-wrapper .navi-wrap > li:hover {background-color: #ccc; color: #000;}
 .header-wrapper .search:hover {background-color: #f44236;}
-.header-wrapper .navi-wrap .sub-navi {display: none;}
+.header-wrapper .navi-wrap > li:last-child {position: relative;}
+.header-wrapper .navi-wrap .sub-navi {display: none; position: absolute; background-color: #f9f9f9;top: 3em; left: 0; color: #000;}
+.header-wrapper .navi-wrap .sub-navi > li {width: 170px; padding: 0.7em;}
+.header-wrapper .navi-wrap .sub-navi > li:hover {background-color: #ccc;}
 .header-wrapper .swiper-slide {position: relative;}
 .header-wrapper .swiper-slide img {width: 100%;}
 .header-wrapper .title-wrap {position: absolute; bottom: 10%; left: 50%; transform: translateX(-50%); color: #f9f9f9; text-align: center;}
@@ -42,12 +47,11 @@ a {color: inherit; text-decoration: none;}
 .tour-wrapper .img-wrap .tit-wrap {background-color: #f9f9f9; color: #111; padding: 7%;}
 .tour-wrapper .tit-wrap .title {padding-top: 1em;}
 .tour-wrapper .tit-wrap .date {margin: 1.5em 0; color: #999;}
-.tour-wrapper .tit-wrap .bt-buy {background-color: #111; padding: 0.6em 0.9em; margin-top: 1em; color: #fff; text-align: center; width: 120px; letter-spacing: -0.0125; cursor: pointer;}
 
 /* *********.contact-wrapper******** */
 .contact-wrapper .wrapper {margin-top: 4em; padding: 2%;}
 .contact-wrapper .wrapper > .con {display: flex; justify-content: space-between; padding-top: 2em;}
-.contact-wrapper .contact-wrap {line-height: 1.5; font-size: 1.125em; flex: 50% 0 0;}
+.contact-wrapper .contact-wrap {line-height: 1.7; font-size: 1.125em; flex: 50% 0 0;}
 .contact-wrapper .contact-wrap i {margin-right: 0.5em; font-size: 0.875em;}
 .contact-wrapper .note-wrap {flex: 50% 0 0; padding: 1%; position: relative; width: 100%;}
 .contact-wrapper .note-wrap input {border: 1px solid #ccc; padding: 0.7em; font-size: 0.875em;}
@@ -55,4 +59,12 @@ a {color: inherit; text-decoration: none;}
 .contact-wrapper input.name,
 .contact-wrapper input.email {width: 45%;}
 .contact-wrapper input.message {width: 100%; margin-top: 0.5em;}
+.contact-wrapper .bt-send {position: absolute; right: 0; width: 80px;}
 .contact-wrapper img {width: 100%; margin-top: 6em;}
+
+/* *********.footer-wrapper******** */
+.footer-wrapper {margin: 4em 0 4.5em; color: #777; text-align: center;}
+.footer-wrapper .sns-wrap {margin-bottom: 1.75em;}
+.footer-wrapper i {font-size: 1.5em;}
+.footer-wrapper .copyright {letter-spacing: -0.0125em; font-size: 0.9em;}
+.footer-wrapper .copyright b {text-decoration: underline;}
