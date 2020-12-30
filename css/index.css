@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 body {font-family: 'Lato', sans-serif;}
+input {box-sizing: border-box;}
 a {color: inherit; text-decoration: none;}
 .wrapper {max-width: 800px; margin: auto;}
 .text-wrap {text-align: center;}
@@ -36,13 +37,13 @@ a {color: inherit; text-decoration: none;}
 /* *********.band-wrapper******** */
 .band-wrapper {margin-top: 4em; padding: 2%;}
 .band-wrapper .text-wrap .content {text-align: justify;  line-height: 1.5;}
-.band-wrapper .img-wrapper {display: flex; padding: 4em 0;}
+.band-wrapper .img-wrapper {display: flex; padding: 4em 0; flex-wrap: wrap;}
 .band-wrapper .img-wrap {flex: 23% 0 0; margin: 0 5.1666%;}
 .band-wrapper .img-wrap .title {display: block; text-align: center; margin: 1em;}
 .band-wrapper .img-wrap img {width: 100%;}
 
 /* *********.tour-wrapper******** */
-.tour-wrapper {background-color: #000; color: #f9f9f9; margin-top: 2.5em; padding: 2%;}
+.tour-wrapper {background-color: #000; color: #f9f9f9; margin-top: 2.5em; padding: 3%;}
 .tour-wrapper .text-wrap {margin: 3.5em 1.5em;}
 .tour-wrapper .mon-box {background-color: #f9f9f9; border: 1px solid #ccc; border-bottom: 0; height: 2.25em; padding: 0 2%; display: flex; align-items: center;}
 .tour-wrapper .mon-box .mon {color: #444; display: inline-block; font-family: 'Lato';}
@@ -50,22 +51,24 @@ a {color: inherit; text-decoration: none;}
 .tour-wrapper .mon-box:last-child {display: flex; justify-content: space-between;}
 .tour-wrapper .mon-box:last-child .num {background-color: #222; border-radius: 50%; padding: 0.3em 0.5em;}
 .tour-wrapper .img-wrapper {display: flex; width: 100%; margin: 2em 0 6em; flex-wrap: wrap;}
-.tour-wrapper .img-wrap {flex: 31% 0 0; margin-right: 3.5%; overflow: hidden;}
+.tour-wrapper .img-wrap {flex: 31% 0 0; margin-right: 3.5%;}
 .tour-wrapper .img-wrap:last-child {margin-right: 0;}
-.tour-wrapper .img-wrap img {width: 100%;}
+.tour-wrapper .img-wrap > a {background-color: #000}
+.tour-wrapper .img-wrap img {width: 100%; position: relative; transition: all .3s;}
+.tour-wrapper .img-wrap:hover img {opacity: 0.7;}
 .tour-wrapper .img-wrap .tit-wrap {background-color: #f9f9f9; color: #111; padding: 7%;}
 .tour-wrapper .tit-wrap .title {padding-top: 1em;}
 .tour-wrapper .tit-wrap .date {margin: 1.5em 0; color: #999;}
 
 /* *********.contact-wrapper******** */
 .contact-wrapper .wrapper {margin-top: 4em; padding: 2%;}
-.contact-wrapper .wrapper > .con {display: flex; justify-content: space-between; padding-top: 2em;}
+.contact-wrapper .wrapper > .con {display: flex; justify-content: space-between; padding-top: 2em; flex-wrap: wrap;}
 .contact-wrapper .contact-wrap {line-height: 1.7; font-size: 1.125em; flex: 50% 0 0;}
 .contact-wrapper .contact-wrap i {margin-right: 0.5em; font-size: 0.875em;}
 
 .contact-wrapper .note-wrap {flex: 50% 0 0; padding: 1%;}
 .contact-wrapper .note-wrap input {border: 1px solid #ccc; padding: 0.7em; font-size: 0.875em;}
-.contact-wrapper .note-wrap > .con {display: flex; justify-content: space-between; width: 100%;}
+.contact-wrapper .note-wrap > .con {display: flex; justify-content: space-between; width: 100%; flex-wrap: wrap;}
 .contact-wrapper .note-wrap .con .name {width: 48%; margin-right: 4%;}
 .contact-wrapper .note-wrap .con .email {width: 48%;}
 .contact-wrapper .note-wrap .message {width: 100%; margin-top: 0.5em;}
@@ -88,5 +91,13 @@ a {color: inherit; text-decoration: none;}
 	.header-wrapper .bars {display: block;}
 	.header-wrapper .swiper-slide .title-wrap {display: none;}
 
-	.band-wrapper .img-wrap {flex: 100% 0 0; margin: auto;}
+	.band-wrapper .img-wrap {flex: 60% 0 0; margin: auto; margin-bottom: 2em;}
+	.band-wrapper .img-wrap:last-child {margin-bottom: 0;}
+
+	.tour-wrapper .img-wrap {flex: 100% 0 0; margin: auto; margin-bottom: 1em;}
+
+	.contact-wrapper .contact-wrap {flex: 100% 0 0; margin: auto; margin-bottom: 1em; padding: 2%;}
+	.contact-wrapper .note-wrap {flex: 100% 0 0; margin: auto;}
+	.contact-wrapper .note-wrap .con .name {width: 100%; margin: auto;}
+	.contact-wrapper .note-wrap .con .email {width: 100%; margin: auto; margin-top: 0.5em;}
 }

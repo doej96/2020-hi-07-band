@@ -22,7 +22,7 @@ function onMoNavi() {
 
 function onResize() {
 	var winWidth = $(window).width();
-	if(winWidth > 576) $('.mo-navi').hide();
+	if(winWidth > 576) $('.mo-navi').removeClass('active');
 }
 
 
