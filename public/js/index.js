@@ -25,8 +25,15 @@ function onResize() {
 	if(winWidth > 576) $('.mo-navi').removeClass('active');
 }
 
+function onScroll(e) {
+	var scTop = $(this).scrollTop();
+	var naviHeight = $('.navi-wrapper').outerHeight();
+	if (scTop > naviHeight) $('.navi-wrapper').css({position:"fixed",width:"100%"});
+	else $('.navi-wrapper').css("position","relative");
+}
 
 $(window).resize(onResize).trigger('resize');
+$(window).scroll(onScroll);
 
 $('.navi-wrap li').mouseenter(onNaviEnter);
 $('.navi-wrap li').mouseleave(onNaviLeave);
