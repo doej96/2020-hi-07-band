@@ -35,6 +35,8 @@ function onScroll(e) {
 new WOW({
 	offset : 150
 }).init();
+
+
 /* 카카오지도 */
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
@@ -52,8 +54,20 @@ var marker = new kakao.maps.Marker({
     position: markerPosition
 });
 
+function setCenter() {            
+	// 이동할 위도 경도 위치를 생성합니다 
+	var moveLatLon = new kakao.maps.LatLng(37.498734, 127.026677);
+	
+	// 지도 중심을 이동 시킵니다
+	map.setCenter(moveLatLon);
+}
+
 // 마커가 지도 위에 표시되도록 설정합니다
 marker.setMap(map);
+map.setZoomable(false); 
+
+
+
 
 $(window).resize(onResize).trigger('resize');
 //$(window).scroll(onScroll);
