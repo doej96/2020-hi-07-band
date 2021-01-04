@@ -32,6 +32,10 @@ function onScroll(e) {
 	else $('.navi-wrapper').css("position","relative");
 }
 
+new WOW({
+	offset : 150
+}).init();
+
 $(window).resize(onResize).trigger('resize');
 //$(window).scroll(onScroll);
 
